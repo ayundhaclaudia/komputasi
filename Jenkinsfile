@@ -10,19 +10,19 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t komputasi-image .'
+                bat 'docker build -t komputasi-image .'
             }
         }
 
         stage('Run Tests (Optional)') {
             steps {
-                sh 'echo "Testing application..."'
+                bat 'echo Testing application...'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'echo "Deploy step here"'
+                bat 'echo Deploy step here'
             }
         }
     }
